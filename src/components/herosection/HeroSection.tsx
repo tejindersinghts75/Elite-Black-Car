@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
   const text: { heading: string; content: string }[] = [
     { heading: "Design with", content: " Technology" },
     { heading: "Limousine", content: "Travel well" },
-    { heading: "My Third Heading", content: "My third content" },
+    { heading: "Travel", content: "with luxury" },
   ];
 
   const handleButtonClick = (index: number) => {
