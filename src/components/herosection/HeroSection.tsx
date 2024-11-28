@@ -36,8 +36,8 @@ const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto max-w-[1200px] px-4 flex justify-start  z-10">
         <div className="text-center text-white flex flex-col items-start">
-          <h1 className={styles.heroSectionHeading}>{text[activeIndex].heading}</h1>
-          <p className="relative z-10 text-center m-0 text-[80px] font-bold text-[#fff] transition-transform duration-[20000ms] ease-out opacity-100 leading-tight">
+          <h1 className="relative z-2 text-center leading-[100%] m-0 text-[80px] font-extrabold text-[#800401] transition-transform duration-[20000ms] ease-out opacity-[1]  max-md:text-[52px]">{text[activeIndex].heading}</h1>
+          <p className="relative z-10 text-center m-0 text-[80px] font-bold text-[#fff] transition-transform duration-[20000ms] ease-out opacity-100 leading-tight  max-md:text-[52px]">
             {text[activeIndex].content}
           </p>
         </div>
