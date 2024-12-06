@@ -10,10 +10,10 @@ type ImageProps = {
 const Cards: React.FC<ImageProps> = ({src, heading, content})=>{
         return(
             <div className="container flex gap-5">
-                <img src={src} className="w-[110px] h-[110px]"/>
+                <img src={src} style={{ width: "110px", height: "110px", borderRadius: "50%" }} />
                 <div>
-                    <h2 className="text-[24px] font-[600]">{heading}</h2>
-                    <p>{content}</p>
+                    <h2 className="text-[24px] text-white font-[600]">{heading}</h2>
+                    <p className="text-white">{content}</p>
                 </div>
             </div>
         

@@ -2,15 +2,31 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+// Define Geist Sans and Geist Mono fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+// Define Helvetica font
+const helvetica = localFont({
+  src: [
+    { path: '/fonts/Helvetica.woff', weight: '400', style: 'normal' },
+      { path: '/fonts/Helvetica-Bold.woff', weight: '700', style: 'normal' },
+      { path: '/fonts/Helvetica-BoldOblique.woff', weight: '700', style: 'italic' },
+      { path: '/fonts/helvetica-compressed-5871d14b6903a.woff', weight: '300', style: 'normal' },
+      { path: '/fonts/helvetica-light-587ebe5a59211.woff', weight: '400', style: 'normal' },
+      { path: '/fonts/Helvetica-Oblique.woff', weight: '400', style: 'italic' },
+     
+  ],
+  variable: '--font-helvetica',  // CSS variable for Helvetica font
 });
 
 export const metadata: Metadata = {
@@ -25,9 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${helvetica.variable} antialiased`}>
         {children}
       </body>
     </html>
