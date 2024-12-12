@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'luxury-car': "url('/luxurycar.jpg')",
+      }
     },
   },
   plugins: [],

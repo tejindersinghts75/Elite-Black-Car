@@ -1,0 +1,6 @@
+.section3-bg {
+    background-image: url('/luxurycar.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
