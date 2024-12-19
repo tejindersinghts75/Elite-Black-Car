@@ -47,7 +47,7 @@ const Ridecard: React.FC<CardProp> = ({ src, mainhead, paragraph, price, duratio
                 </h3>
             </div>
            
-            <Button text="Get Limousine"/>
+            <Button text={button} />
         </div>
     );
 };
