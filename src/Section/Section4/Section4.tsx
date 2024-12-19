@@ -2,7 +2,7 @@
 
 
 import Ridecard from "@/components/ridecard/Ridecard"
-import { features } from "process"
+
 import React from "react"
 
 const Section4 =()=>{
