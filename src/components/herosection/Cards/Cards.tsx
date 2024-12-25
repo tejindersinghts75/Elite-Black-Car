@@ -16,7 +16,7 @@ const Cards: React.FC<ImageProps> = ({src, heading, content})=>{
                     <p className="text-white">{content}</p>
                 </div>
             </div>
-        
+
         )
 }
 export default Cards
