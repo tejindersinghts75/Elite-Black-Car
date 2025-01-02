@@ -2,22 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Taviraj", serif;
+}
+
+p {
+  font-family: "Mulish", serif;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: 500;
+  line-height: 108px;
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 80px;
+}
+
+h3 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 57.6px;
+}
+h4 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46px;
+}
+
+.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.2px;
+  font-family: "Mulish", serif;
+}
+
+.body-text-big {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 39.6px;
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+
+.button {
+  border: none;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 27.2px;
+
+}
+
+.container {
+  max-width: 1510px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 786px) {
+
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: var(--font-helvetica), sans-serif;
-  font-size: 18px;
+  
+  h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h4 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  
+  .body-text {
+    font-size: 16px;
+    line-height: 27.2px;
+  }
+  
+  .body-text-big {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  
+  h6 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
 }

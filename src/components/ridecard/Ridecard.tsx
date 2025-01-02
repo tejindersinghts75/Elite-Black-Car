@@ -31,7 +31,7 @@ const Ridecard: React.FC<CardProp> = ({ src, mainhead, paragraph, price, duratio
                 <img src={src} alt="Card image" />
             </div>
             <div>
-                <h3>{mainhead}</h3>
+                <h6>{mainhead}</h6>
                 <p className="text-[14px]">{paragraph}</p>
             </div>
             <div className="flex justify-between gap-3">
@@ -40,11 +40,11 @@ const Ridecard: React.FC<CardProp> = ({ src, mainhead, paragraph, price, duratio
                 ))}
             </div>
             <div>
-                <h3 className="flex gap-1 items-center">
-                    <span>  {price}</span>
+                <h6 className="flex gap-1 items-center">
+                    <span> {price}</span>
                     /
                     <span className="text-[12px]">{duration}</span>
-                </h3>
+                </h6>
             </div>
            
             <Button text={button} />

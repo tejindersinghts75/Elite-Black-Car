@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  mode:'jit',
+  mode: 'jit',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{js,jsx,ts,tsx}',
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -12,6 +12,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        yellow: "#D7B65D",
+        dark: "#192026"
       },
       backgroundImage: {
         'luxury-car': "url('/luxurycar.jpg')",
