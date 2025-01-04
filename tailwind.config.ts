@@ -12,8 +12,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        yellow: "#D7B65D",
-        dark: "#192026"
+        yellow: "#800401",
+        dark: "#192026",
+        red: "#800401"
       },
       backgroundImage: {
         'luxury-car': "url('/luxurycar.jpg')",

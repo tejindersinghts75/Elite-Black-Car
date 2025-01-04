@@ -12,17 +12,17 @@ type sectionProps={
 const Section5: React.FC<sectionProps> = ({mainhead, paragraph, src}) => {
   return (
     
-    <div className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md">
-      <h1 className="text-[54px] font-bold text-gray-800 mb-4">{mainhead}</h1>
-      <p className="text-[45px] text-gray-600 text-center mb-6">
+    <div className="flex flex-col items-center px-6 pt-10 md:pt-20 mb-[-50px] bg-gray-100 ">
+      <p className="body-text-big">{mainhead}</p>
+      <h2 className="mb-10">
        {paragraph}
-      </p>
+      </h2>
       <Image
         src={src} // Replace this with your image path
         alt="Example Image"
-        width={500}
+        width={1000}
         height={300}
-        className="rounded-lg shadow-lg"
+        className=""
       />
     </div>
     
