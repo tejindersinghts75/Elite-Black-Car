@@ -25,7 +25,7 @@ const Section6: React.FC = () => {
     ];
 
     return (
-        <div className="bg-dark Section6 px-8">
+        <div className="bg-dark Section6 pt-6 md:pt-40 px-8">
             <div className="container">
                 <div className="grid md:grid-cols-2 mx-auto py-24 gap-12">
                     <div className="image_trip">
