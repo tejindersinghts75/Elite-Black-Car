@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 interface TextSliderProps {
   items: string[]; // Array of text items to display
 }
-import './slider.css'
+//import './slider.css'
 const TextSlider: React.FC<TextSliderProps> = ({ items }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
