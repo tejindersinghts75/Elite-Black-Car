@@ -3,12 +3,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-overflow: hidden;
-  position: relative; /* Required for the pseudo-element to position correctly */
+  overflow: hidden;
+  position: relative;
+  /* Required for the pseudo-element to position correctly */
   background-size: cover;
   background-position: center;
 
 }
+
+.heroSection {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.backgroundWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+
 .backgroundImage {
   position: absolute;
   top: 0;
@@ -17,96 +35,155 @@ overflow: hidden;
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation:  zoom-in-out 20s infinite ease-in-out; /* Only background image is animated */
-  z-index: 0;
-}
-@keyframes zoom-in-out {
-  0% {
-    transform: scale(1); /* Initial state */
-  }
-  50% {
-    transform: scale(1.1); /* Zoom in slightly */
-  }
-  100% {
-    transform: scale(1); /* Return to original state */
-  }
-}
-.container {
-  position: relative;
-  z-index: 10; /* Ensures content is above the background */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.heroSection::before {
-  content: ''; /* Ensures the pseudo-element renders */
-  position: absolute; /* Makes it span the entire parent div */
+.backgroundImage.active {
+  opacity: 1;
+}
+
+.backgroundImage.inactive {
+  opacity: 0;
+}
+
+.buttonPanel {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+
+
+
+.backgroundImage {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0, 0, 0.5); /* Black overlay with 50% opacity */
-  z-index: 1; /* Keeps it below the content inside the div */
-  transition: background 0.5s ease; /* Optional: matches your existing transition */
+  background-size: cover;
+  background-position: center;
+  animation: zoom-in-out 20s infinite ease-in-out;
+  /* Only background image is animated */
+  z-index: 0;
+}
+
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+    /* Initial state */
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* Zoom in slightly */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Return to original state */
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  /* Ensures content is above the background */
+}
+
+.heroSection::before {
+  content: '';
+  /* Ensures the pseudo-element renders */
+  position: absolute;
+  /* Makes it span the entire parent div */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black overlay with 50% opacity */
+  z-index: 2;
+  /* Keeps it below the content inside the div */
+  transition: background 0.5s ease;
+  /* Optional: matches your existing transition */
 }
 
 
 
-  
-  .content {
-    text-align: center;
-    color: #fff;
-  }
-  
+
+.content {
+  text-align: center;
+  color: #fff;
+}
+
+.buttonPanel {
+  position: absolute;
+  z-index: 5;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (max-width:768px) {
   .buttonPanel {
     position: absolute;
     z-index: 5;
     right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-   @media (max-width:768px)
-  {
-    .buttonPanel{
-  position: absolute;
-    z-index: 5;
-    right: 20px;
-     bottom: 2%; 
+    bottom: 2%;
     transform: translateY(-50%);
     display: flex;
     top: auto;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
-    }
-  } 
-  
-  .dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid #000;
-    cursor: pointer;
-    transition: transform 0.3s ease;
   }
-  
-  .dot.active {
-    transform: scale(1.2);
-    background: #000;
-    border: 2px solid #fff;
-  }
-  
+}
 
-  .heroSectionHeading{
-    position: relative; /* Keeps the text above the overlay */
-    z-index: 2; /* Ensures the text stays above the overlay */
-    text-align: center;
-    line-height: 100%;
-    margin: 0;
-    font-size: 80px;
-    font-weight: 700;
-    color: #800401;
-    transition: transform 20000ms ease-out, opacity 1000ms;
-  }
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+.dot.active {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.2);
+  background: transparent;
+  border: 1px solid #D7B65D;
+  padding: 5px;
+  position: relative;
+}
+
+.dot.active::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  content: "";
+  background-color: #D7B65D;
+  border-radius: 10px;
+}
+
+.heroSectionHeading {
+  position: relative;
+  /* Keeps the text above the overlay */
+  z-index: 2;
+  /* Ensures the text stays above the overlay */
+  text-align: center;
+  line-height: 100%;
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  color: #800401;
+  transition: transform 20000ms ease-out, opacity 1000ms;
+}

@@ -11,45 +11,45 @@ const Section4 =()=>{
       {  src:"/ridecardfirstimage.jpg",
         mainhead:"Cadillac Limousine",
         paragraph:"Insured, leather interior, air conditioning, rain sensor, panoramic roof",
-        price:"12$",
+        price:"260$",
         duration:"per hour",
         button:"Get Limo",
         features:[
-            {src:"/ridecardfirstimage.jpg",text: "4 seats"},
-            {src:"/ridecardfirstimage.jpg",text: "4 seats"},
-            {src:"/ridecardfirstimage.jpg",text: "4 seats"}
+            {src:"/images/seats.svg",text: "4 seats"},
+            {src:"/images/Diesel.svg",text: "Diesel"},
+            {src:"/images/Mechanic.svg",text: "Mechanic"}
         ]
         },
-        {  src:"/ridecardfirstimage.jpg",
-            mainhead:"Cadillac Limousine",
+        {  src:"/images/Mercedes.png",
+            mainhead:"Mercedes Benz E-Class",
             paragraph:"Insured, leather interior, air conditioning, rain sensor, panoramic roof",
-            price:"12$",
+            price:"190$",
             duration:"per hour",
             button:"Get Limo",
             features:[
-                {src:"/ridecardfirstimage.jpg",text: "4 seats"},
-                {src:"/ridecardfirstimage.jpg",text: "4 seats"},
-                {src:"/ridecardfirstimage.jpg",text: "4 seats"}
+                {src:"/images/seats.svg",text: "4 seats"},
+                {src:"/images/Diesel.svg",text: "Auto"},
+                {src:"/images/Mechanic.svg",text: "Petrol"}
             ]
             }
             ,
-        {  src:"/ridecardfirstimage.jpg",
-            mainhead:"Cadillac Limousine",
+        {  src:"/images/Range-Rover.png",
+            mainhead:"Range Rover Sport 5.5",
             paragraph:"Insured, leather interior, air conditioning, rain sensor, panoramic roof",
-            price:"12$",
+            price:"210$",
             duration:"per hour",
             button:"Get Limo",
             features:[
-                {src:"/ridecardfirstimage.jpg",text: "4 seats"},
-                {src:"/ridecardfirstimage.jpg",text: "4 seats"},
-                {src:"/ridecardfirstimage.jpg",text: "4 seats"}
+                {src:"/images/seats.svg",text: "5 seats"},
+                {src:"/images/Diesel.svg",text: "Auto"},
+                {src:"/images/Mechanic.svg",text: "Petrol"}
             ]
             }
         ]
 
 
     return(
-        <div className="py-24">
+        <div className="py-24 fichers">
             <div className="flex container mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-2 lg:gap-6 px-5"  > 
                 {cards.map((card, index)=>(
                       <Ridecard key={index} src={card.src} mainhead={card.mainhead} paragraph={card.paragraph} price={card.price} duration={card.duration} button={card.button} features={card.features}/>
