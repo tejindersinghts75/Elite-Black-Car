@@ -13,7 +13,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,button {
   font-family: "Taviraj", serif;
 }
 
@@ -67,7 +67,7 @@ h6 {
 .button {
   border: none;
   padding: 14px 32px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 27.2px;
 
@@ -78,7 +78,14 @@ h6 {
   margin: 0 auto;
   width: 100%;
 }
-
+.formblock {
+  transform: translate(-0%, -50%);
+  right: 70px;
+  top: 50%;
+}
+.secimage{
+  transform: translateX(-50%) translateY(-50%);
+}
 @media only screen and (max-width: 768px) {
 
   h1 {

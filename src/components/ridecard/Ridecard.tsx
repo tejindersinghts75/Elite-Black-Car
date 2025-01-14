@@ -18,8 +18,8 @@ type FeatureItem = {
 };
 
 const FeatureComponent: React.FC<{ src: string; text: string }> = ({ src, text }) => (
-    <div className="flex items-center flex-col px-5 py-1 border border-gray-200">
-        <img  className="w-[60px]" src={src} alt="Feature icon" />
+    <div className="flex items-center flex-col px-5 py-3 border border-gray-200">
+        <img  className="w-[20px] mb-3" src={src} alt="Feature icon" />
         <p className="text-[12px]">{text}</p>
     </div>
 );
@@ -34,17 +34,18 @@ const Ridecard: React.FC<CardProp> = ({ src, mainhead, paragraph, price, duratio
                 <h6>{mainhead}</h6>
                 <p className="text-[14px]">{paragraph}</p>
             </div>
-            <div className="flex justify-between gap-3">
+            <div className="grid grid-cols-3  gap-4">
                 {features.map((feature, index) => (
                     <FeatureComponent key={index} src={feature.src} text={feature.text} />
                 ))}
             </div>
-            <div>
-                <h6 className="flex gap-1 items-center">
-                    <span> {price}</span>
+            <div className="flex justify-between">
+                <h6 className="flex gap-1  items-center">
+                    <span className="text-yellow"> {price}</span>
                     /
-                    <span className="text-[12px]">{duration}</span>
+                    <span className="text-[12px] ">{duration}</span>
                 </h6>
+                <img src="/images/stars.svg" alt="text" />
             </div>
            
             <Button text={button} />

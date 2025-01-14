@@ -1,3 +1,8 @@
 .footer svg{
     margin: 0 auto;
 }
+.footer {
+    background-image: url(/images/Footerbg.png);
+    background-size: cover;
+    background-position: center;
+}

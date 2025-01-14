@@ -13,7 +13,7 @@ const Button : React.FC<buttonPRop> =({text})=>{
 
     return( 
         <>
-        <button className="bg-[#800401] py-2 px-8 rounded-[3px] text-white font-normal text-[14px]">{text}</button>
+        <button className="button bg-red ">{text}</button>
         </>
     )
 }
