@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import './slider.css'
+
 interface TextSliderProps {
   items: string[]; // Array of text items to display
 }
-
+import './slider.css'
 const TextSlider: React.FC<TextSliderProps> = ({ items }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
